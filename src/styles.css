@@ -1,0 +1,198 @@
+/*
+Top half of this is from:
+  html5doctor.com Reset Stylesheet
+  v1.6.1
+  Last Updated: 2010-09-17
+  Author: Richard Clark - http://richclarkdesign.com
+  Twitter: @rich_clark
+
+  Also used as resetpgs.css elsewhere
+
+Bottom half is the application styling by Paul Sons.
+*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  margin:0;
+  padding:0;
+  border:0;
+  outline:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+body {
+  line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+  display:block;
+}
+
+nav ul {
+  list-style:none;
+}
+
+blockquote, q {
+  quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content:'';
+  content:none;
+}
+
+a {
+  margin:0;
+  padding:0;
+  font-size:100%;
+  vertical-align:baseline;
+  background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color:#ff9;
+  color:#000;
+  text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color:#ff9;
+  color:#000;
+  font-style:italic;
+  font-weight:bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+  border-bottom:1px dotted;
+  cursor:help;
+}
+
+table {
+  border-collapse:collapse;
+  border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display:block;
+  height:1px;
+  border:0;
+  border-top:1px solid #cccccc;
+  margin:1em 0;
+  padding:0;
+}
+
+input, select {
+  vertical-align:middle;
+}
+
+/*
+End of the reset stuff
+Beginning of the app stuff.
+  Trying to style on top of HTML5 semantics.
+*/
+
+.input-search {
+  display: flex;
+  flex-direction: row;
+  /*padding: .2em 0 .2em 0;*/
+}
+
+.input-search > input {
+  flex-grow: 5;
+}
+
+
+.input-search > button {
+  flex-grow: 1;
+}
+
+.app-root-container {
+  max-width: 400px;
+  font-family: arial;
+  font-size: 16px;
+}
+
+.app-root-container > header {
+  /*width: 800px;*/
+  background-color: #b8b8e0;
+}
+.app-root-container > header >h2 {
+  text-align: center;
+  padding: .25em;
+  font-size: 2em;
+}
+
+/* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+.app-root-container > nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  background-color: #4d94ff;
+  border-style: solid;
+  border-width: 0 1em 0 1em;
+  border-color: #b8b8e0;
+}
+
+.app-root-container > nav > .tab {
+  border-style: solid;
+  border-width: 0 1em 0 1em;
+  border-color: #b8b8e0;
+  font-size: 1em;
+  text-align: center;
+  vertical-align: middle;
+  flex-grow: 1;
+  /*height: 2.5em;*/
+  /*padding: .2em;*/
+  padding: .4em .2em .4em .2em;
+}
+
+
+.app-root-container > nav > .inactive-tab {
+  background-color: #4d94ff;
+}
+
+.app-root-container > nav > .active-tab {
+  background-color: #cce0ff;
+}
+.app-root-container > main {
+  border-style: solid;
+  border-width: 0 1em 0 1em;
+  border-color: #b8b8e0;
+  background-color: #cce0ff;
+  min-height: 300px;
+  padding: 2em;
+}
+.app-root-container > footer {
+  background-color: #b8b8e0;
+  text-align: center;
+  font-size: .6em;
+  padding: .2em;
+}
+
+.user-interaction > figure > figcaption {
+  padding: .4em 0 .4em 0;
+}
+
+.user-interaction > figure {
+width: 300px
+}

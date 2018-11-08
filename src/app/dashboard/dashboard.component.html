@@ -1,0 +1,16 @@
+
+<section class="user-input input-search">
+  <input type="text" #newquery
+         [value]="'dog'"
+         (keydown.enter)="submit(newquery.value)" >
+  <button (click)="submit(newquery.value)">Search</button>
+</section>
+
+<section *ngIf="haveUserSubmit" class="user-interaction">
+  <figure>
+    <figcaption>
+  <app-wiki-result [wikiSearchTerm]="newquery.value" ></app-wiki-result>
+    </figcaption>
+  <img *ngIf="giphySearchResults" width="300" src="{{giffyGif}}" alt='{{searchArg}}'>
+  </figure>
+</section>

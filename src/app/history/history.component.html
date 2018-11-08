@@ -1,0 +1,6 @@
+ <section class="user-interaction">
+  <ol>
+    <li *ngFor="let searchItem of this.historyService.getSearches()">{{searchItem.formatted()}}</li>
+  </ol>
+</section>
+

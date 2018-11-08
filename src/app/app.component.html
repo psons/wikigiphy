@@ -1,0 +1,19 @@
+<div class="app-root-container">
+  <header>
+    <h1>
+      Welcome to {{ title | titlecase}}!
+    </h1>
+  </header>
+  <nav>
+    <div [routerLink]="['dashboard']" routerLinkActive="active-tab" class="tab">
+      Dashboard
+    </div>
+    <div [routerLink]="['searchHist']" routerLinkActive="active-tab" class="tab">
+      Search History
+    </div>
+  </nav>
+  <main>
+    <router-outlet></router-outlet>
+  </main>
+  <footer>Copyright 2018 Paul Sons </footer>
+</div>
